@@ -1,0 +1,4 @@
+type Query{
+    getLearningResourceById(request: GetLearningResourceByIdRequest!): GetLearningResourceByIdResponse!
+    getLearningResources: GetLearningResourcesResponse
+}

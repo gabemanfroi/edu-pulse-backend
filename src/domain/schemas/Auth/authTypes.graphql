@@ -1,0 +1,8 @@
+input LoginRequest{
+    username: String!
+    password: String!
+}
+
+type LoginResponse{
+    token: String
+}

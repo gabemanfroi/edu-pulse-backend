@@ -1,0 +1,34 @@
+enum LearningResourceCategory {
+    BOOK
+    COURSE
+}
+
+type LearningResource {
+    category:LearningResourceCategory!
+    url: String
+}
+
+type GetLearningResourceByIdResponse{
+    learningResource: LearningResource
+}
+
+type GetLearningResourcesResponse {
+    learningResources: [LearningResource]!
+}
+
+input GetLearningResourceByIdRequest {
+    id: ID!
+}
+
+input CreateLearningResourceInput{
+    category: LearningResourceCategory!
+    url: String
+}
+
+input CreateLearningResourceRequest {
+    learningResource: CreateLearningResourceInput!
+}
+
+type CreateLearningResourceResponse {
+    learningResource: LearningResource!
+}
